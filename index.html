@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <title>Creating a Simple Parallax Scrolling Website</title>
+       <link rel="stylesheet" href="css/style.css"/>
+	   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+       <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>	
+	   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+	<script>
+   
+<!----- JQUERY FOR SLIDING NAVIGATION --->   
+$(document).ready(function() {
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+
+<!----- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV--->   
+         $(this).click(function() {
+            $("#nav li a").removeClass("active");
+            $(this).addClass('active');
+           $('html, body').animate({scrollTop: targetOffset}, 1000);
+           return false;
+         });
+      }
+    }
+  });
+
+});
+
+
+</script>
+
+
+ </head> 
+	
+<body>
+
+</div>
+
+<!----- HEADER START--->   
+<header id="header">
+<div class="content">
+<div id="logo"><a href="">Urey for President </a></div>
+
+<nav id="nav">
+	<ul>
+		<li><a href="#slide1" class="active" title="Next Section" >Slide 1</a></li>
+		<li><a href="#slide2" title="Next Section">Slide 2</a></li>
+		<li><a href="#slide3" title="Next Section">Slide 3</a></li>
+		<li><a  href="#slide4" title="Next Section">Slide 4</a></li>
+		<li><a href="#slide5" title="Next Section">Slide 5</a></li>
+	</ul>
+</nav>
+</div>
+</header>	
+<!----- HEADER END--->   
+
+<!----- SLIDES START --->   	
+	<div id="slide1">
+		<div class="content">
+			<div id="christmas_tree"> </div>
+			<div id="snowflakes1"></div>
+			<div id="snowflakes2"></div>
+            <h2>Hope</h2>
+		    <h1>For our Future</h1>
+		    <div id="divider"> </div>
+		     <h3>2017 </h3>
+           <div id="ribbon"></div>
+	       <div id="new_year"> </div>
+		</div> 
+    </div> 
+
+	<div id="slide2">
+		<div class="content" >
+            <div class="quotes_container">
+		    <h3 class="quotes">“I will never give up on the Liberian people, no matter what. They have inspired me immensely, therefore Liberian politics will never be the same. Thank you, and God bless Liberia.”</h3>
+		  <img src="img/news.jpg" align="left"/> <h4 class="author_name_gray">Benoni Urey </h4>
+		</div> 
+		</div> 
+    </div> 
+	
+	
+   <div id="slide3">
+		<div class="content">
+			   <div class="quotes_container">
+		       <h3 class="quotes"><form class="form-inline">
+  <div class="form-group">
+    <label for="exampleInputName2">Name</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">Email</label>
+    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+  </div>
+  <button type="submit" class="btn btn-default">Send invitation</button>
+</form></h3>
+		      <!-- <img src="img/norman.png" align="left"/> <h4 class="author_name_white">Benoni 2017 </h4>-->
+		    </div> 
+		</div> 
+    </div> 
+	
+	
+	<div id="slide4">
+		<div class="content">
+              <div class="quotes_container">
+		    <h3 class="quotes">“I'm not running for president because it's my turn, but because it's our people's turn to live in a nation of hope and opportunity for all. The most important thing you can do is love each other. If we stand together in peace, we can create a new Liberia for hundreds of generations” </h3>
+		  <img src="img/beno1.png" align="left"/> <h4 class="author_name_gray">Urey for President </h4>
+		</div> 
+		</div> 
+    </div> 
+	
+	
+	<div id="slide5">
+		<div class="content">
+           <div class="quotes_container">
+		    <h3 class="quotes">“” </h3>
+		    <img src=""/> <h4 class="author_name_white">Urey for President </h4>
+		  </div> 
+		<div id="copyright"><a href="http://www.1stwebdesigner.com/">Copyright benoniurey.com </a></div>  
+		</div> 
+		
+
+    </div> 
+	
+<!----- SLIDES END --->
+
+</body>
+</html>
