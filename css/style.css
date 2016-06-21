@@ -176,6 +176,11 @@ ul.built { list-style: none; margin: 0 auto; width: 730px; }
 	background-size: 900px 600px;
 }
 
+.class{
+  width: 30px;
+  height: 40px;
+}
+
 
 /*= FOOTER 
 --------------------------------------------------------*/
